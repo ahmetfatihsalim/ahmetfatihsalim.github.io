@@ -16,7 +16,7 @@ export default function GlassHeader() {
     e.preventDefault();
     const targetElement = document.getElementById(item);
     targetElement?.scrollIntoView({ behavior: "smooth" });
-    setTimeout(toggleMenu, 300);
+    setTimeout(toggleMenu, 1000);
   };
 
   return (
