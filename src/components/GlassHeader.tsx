@@ -9,24 +9,15 @@ export default function GlassHeader() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // This function handles the smooth scroll and closes the menu
-const handleNavClick = (
-  e: React.MouseEvent<HTMLAnchorElement>,
-  item: string
-) => {
-  // 1. Prevent the link's default behavior
-  e.preventDefault();
-
-  // 2. Find the element to scroll to
-  const targetElement = document.getElementById(item);
-
-  // 3. Smoothly scroll to it
-  targetElement?.scrollIntoView({ behavior: "smooth" });
-
-  // 4. Call the original toggleMenu inside a timeout
-  //    to close the menu *after* the scroll has started.
-  setTimeout(toggleMenu, 100);
-};
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    item: string
+  ) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(item);
+    targetElement?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(toggleMenu, 300);
+  };
 
   return (
     <header className="sticky z-50 w-full backdrop-blur-md backdrop-filter bg-background/70 dark:bg-background/40 border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
