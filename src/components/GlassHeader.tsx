@@ -9,6 +9,16 @@ export default function GlassHeader() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    item: string
+  ) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(item);
+    targetElement?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(toggleMenu, 1000);
+  };
+
   return (
     <header className="sticky z-50 w-full backdrop-blur-md backdrop-filter bg-background/70 dark:bg-background/40 border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
       <div className="container max-w-4xl mx-auto p-4 flex justify-between items-center">
@@ -74,7 +84,7 @@ export default function GlassHeader() {
                     key={item}
                     href={`#${item}`}
                     className="transition-colors hover:text-foreground/80 text-foreground/60 py-2"
-                    onClick={toggleMenu}
+                    onClick={(e) => handleNavClick(e, item)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.1 }}

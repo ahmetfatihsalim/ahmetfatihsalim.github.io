@@ -1,8 +1,9 @@
 import { education } from "@/lib/data";
 import TimelineItem from "./TimelineItem";
-import { Award } from "lucide-react";
+import { Award, CodeIcon } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
+import { SkillTag } from "./SkillsSection";
 
 export default function EducationSection() {
   return (
@@ -61,6 +62,21 @@ export default function EducationSection() {
                       </motion.li>
                     ))}
                   </ul>
+                  {edu.skills && edu.skills.length > 0 && (
+                    <div className="mt-4 pt-4 border-t border-purple-500/10">
+                      <div className="flex items-center mb-3">
+                        <div className="h-6 w-6 flex items-center justify-center rounded-full bg-blue-500/10 mr-2">
+                          <CodeIcon className="h-4 w-4 text-blue-500" />
+                        </div>
+                        <h4 className="text-sm font-medium">Key Skills</h4>                    
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.skills.map((skill, i) => (
+                          <SkillTag key={skill} skill={skill} index={i} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               )}
             </TimelineItem>
