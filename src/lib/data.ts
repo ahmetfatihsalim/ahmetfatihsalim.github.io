@@ -28,7 +28,7 @@ export const workExperience = [
     ],
     skills: [
           "C#",
-          ".NET Core",
+          ".NET",
           "Entity Framework",
           "Javascript",
           "Typescript",
@@ -56,9 +56,6 @@ export const workExperience = [
 "♦ Developed the cross-platform mobile application for real-time alerts, achieving critical performance metrics (detection in <0.1s, push notifications in <1s)."
     ],
     skills: [
-          "Project Management",
-          "Data Augmentation",
-          "Data Labeling",
           "Python", 
           "PyTorch", 
           "TensorFlow", 
@@ -72,6 +69,9 @@ export const workExperience = [
           "NoSQL",
           "Firebase",
           "GitLab", 
+          "Project Management",
+          "Data Augmentation",
+          "Data Labeling",
         ]
   },
   {
@@ -91,7 +91,7 @@ export const workExperience = [
     ],
     skills: [
           "C#",
-          ".NET Core",
+          ".NET",
           "Entity Framework",
           "Javascript",
           "React",
@@ -121,7 +121,7 @@ export const workExperience = [
     ],
     skills: [
       "C#",
-      ".NET Core",
+      ".NET",
       "Entity Framework",
       "C++",
       "Angular",
@@ -173,13 +173,24 @@ export const education = [
     skills: [
       "Software Engineering",
       "Full-Stack Development",
+      "Artificial Intelligence", 
       "Machine Learning",
       "Data Science",
       "Relational Databases",
-      "Algorithms",
       "Web Design",
+      "Software Project Management", 
+      "Natural Language Analysis", 
+      "Data Structures and Algorithms", 
+      "Programming Language Design", 
+      "Embedded Systems", 
+      "Signals and Systems", 
+      "Operating Systems", 
+      "Computer Networks",
       "Linux",
-      "C/C++",
+      "C#",
+      "Python",
+      "C",
+      "C++",
       "Marketing",
       "Networking",
       "Entrepreneurship",
@@ -207,14 +218,14 @@ export const skills = {
   ],
   frontendDevelopment: [
     "Typescript",
-    "AngularJS",
-    "ReactJS",
-    "Vue.js",
+    "Angular",
+    "React",
+    "Vue",
     "React Native",
     "HTML",
     "CSS"
   ],
-  backendDevelopment: [".NET Core", "Entity Framework", "Node.js", "Flask", "Django", "Kotlin"],
+  backendDevelopment: [".NET", "Entity Framework", "Node.js", "Flask", "Django", "Kotlin"],
   databaseAndStorage: ["MSSSQL", "MySQL", "PostgreSQL", "NoSQL"],
   cloudAndDevOps: ["Docker", "Firebase", "AWS"],
   toolsAndServices: [
